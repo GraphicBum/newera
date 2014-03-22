@@ -1,0 +1,39 @@
+.screen-reader-text {
+position: absolute !important;
+clip: rect(1px 1px 1px 1px);
+clip: rect(1px, 1px, 1px, 1px);
+}
+#toolbelt {
+background: url(../images/tool-belt.jpg) no-repeat;
+
+text-align: center;
+padding: 50px 0;
+margin: 0 auto;
+}
+.mobile{
+     @include visible(all-phones);
+     @include hidden(desktop);
+}
+.tablet{
+    @include visible(tablets);
+     @include hidden(desktop);
+}
+.desktop-only{
+    @include hidden(tablets);
+    @include hidden(all-phones);
+     @include visible(desktop);
+}
+section{
+    @include row();
+}
+
+
+#gallery li.gallery-images {
+  @include fancytiles(4,2,1, $min-device-width, '600px', $row-max-width);
+  min-height: 300px;
+  height: auto;
+}
+
+
+header h1.logo img{transition:5s ease-in;opacity:0}
+header.fixed h1.logo img {opacity:1}
