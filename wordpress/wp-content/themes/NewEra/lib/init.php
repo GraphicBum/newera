@@ -44,7 +44,9 @@ function idm_setup() {
 
 	// Add Image Sizes
 	// add_image_size( $name, $width = 0, $height = 0, $crop = false );
-
+    if ( function_exists( 'add_image_size' ) ) {
+	add_image_size( 'gallery-thumb', 300, 300, true );
+    }
 	// Enable Custom Headers
 	// add_theme_support( 'custom-header' );
 

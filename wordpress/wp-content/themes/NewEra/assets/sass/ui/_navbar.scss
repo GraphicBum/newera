@@ -47,9 +47,10 @@
   }
 }
 
-.navbar .logo {
+header.navbar .logo,.home header.navbar .logo {
   display: inline-block;
-  margin: 0 $gutter 0 0;
+  width:0!important;
+  margin: 0;
   padding: 0;
   @include line-and-height(height-calc($larger - 3));
   a {
@@ -76,7 +77,8 @@
     }
   }
 }
-
+header.fixed .logo, body:not(.home) header.navbar .logo{width:columns(4)!important;  margin: 0 $gutter 0 0;}
+.page header.navbar .logo img{opacity:1}
 .navbar ul {
   display: table;
   vertical-align: middle;

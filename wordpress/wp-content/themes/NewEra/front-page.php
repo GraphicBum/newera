@@ -1,44 +1,14 @@
-<?php get_header();?>
+<?php get_header(); ?>
 
-<section>
-    <h2><i class="icon-tools"></i>Recent Projects</h2>
-       <ul class="four_up tiles">
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-       </ul>
-</section>
-<section>
-    <h2><i class="icon-tools"></i>Recent Projects</h2>
-       <ul class="four_up tiles">
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-       </ul>
-</section>
-<section>
-    <h2><i class="icon-tools"></i>Recent Projects</h2>
-       <ul class="four_up tiles">
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-           <li><img src="http://placebear.com/300/300" /></li>
-       </ul>
-</section>
+	<section id="main" role="main">
 
- 
-<?php get_footer();?>
+		<?php while ( have_posts() ) : the_post(); ?>
+
+			<?php get_template_part( 'templates/partials/content', 'page' ); ?>
+
+		<?php endwhile; ?>
+
+	</section> <!-- /#main -->
+
+
+<?php get_footer(); ?>
