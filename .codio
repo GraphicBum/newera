@@ -1,0 +1,20 @@
+{
+// Configure your Run and Preview buttons here.
+
+// Run button configuration
+  "commands": {
+        "Node version": "node --version",
+      "Go to theme Dir": "cd wordpress/wp-content/themes/NewEra",
+      "Grunt": "cd wordpress/wp-content/themes/NewEra && grunt",
+      "Sass": "cd wordpress/wp-content/themes/NewEra && grunt sass",
+      "Images": "cd wordpress/wp-content/themes/NewEra && grunt images"
+  },
+
+// Preview button configuration
+  "preview": {
+        "Project Index (static)": "https://{{domain}}/{{index}}",
+        "Current File (static)": "https://{{domain}}/{{filepath}}",
+        "Box URL": "http://{{domain}}:3000/wordpress",
+        "Box URL SSL": "https://{{domain}}:9500/"
+  }
+}

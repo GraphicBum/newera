@@ -20,7 +20,6 @@
 		<?php the_tags( 'Tags: ', ', ', ''); ?>
 
 	</div>
-
 	<?php get_template_part( 'templates/partials/inc', 'socialbuttons' ); ?>
 
 </article>

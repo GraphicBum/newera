@@ -1,27 +1,24 @@
-.screen-reader-text {
-position: absolute !important;
-clip: rect(1px 1px 1px 1px);
-clip: rect(1px, 1px, 1px, 1px);
+body > div.row {
+    padding-top: 80px;
 }
-#toolbelt {
-background: url(../images/tool-belt.jpg) no-repeat;
 
-text-align: center;
-padding: 50px 0;
-margin: 0 auto;
+.screen-reader-text {
+    position: absolute!important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
 }
 .mobile{
-     @include visible(all-phones);
-     @include hidden(desktop);
+    @include visible(all-phones);
+    @include hidden(desktop);
 }
 .tablet{
     @include visible(tablets);
-     @include hidden(desktop);
+    @include hidden(desktop);
 }
 .desktop-only{
     @include hidden(tablets);
     @include hidden(all-phones);
-     @include visible(desktop);
+    @include visible(desktop);
 }
 section{
     @include row();
@@ -29,10 +26,198 @@ section{
 
 
 #gallery li.gallery-images {
-  @include fancytiles(4,2,1, $min-device-width, '600px', $row-max-width);
-  min-height: 300px;
-  height: auto;
+    @include fancytiles(4,2,1, $min-device-width, '600px', $row-max-width);
+    min-height: 300px;
+    height: auto;
 }
-
-header h1.logo img{transition:1s ease-in;opacity:0}
-header.fixed h1.logo img {opacity:1}
+#toolbelt{
+    background:url(../images/tool-belt.jpg) no-repeat;
+    text-align:center;
+    padding:50px 0;
+    margin:0 auto
+        }
+#concrete{
+    background:url(../images/bricks.JPG) fixed no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    text-align:center;
+    padding:0 0 100px 0;
+    min-height:500px
+        }
+#interior{
+    background:url(../images/interior.jpg) fixed no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    text-align:center;
+    padding:0 0 100px 0;
+    min-height:500px
+        }
+#exterior{
+    background:url(../images/exterior.jpg) fixed no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    text-align:center;
+    padding:0 0 100px 0;
+    min-height:500px
+        }
+.home header h1.logo{
+    width:0 !important;
+    transition:width 1s ease-in-out
+        }
+.home header.fixed h1.logo,.page h1.logo{
+    width:31.91489% !important
+        }
+.testimonal-wrapper{
+    position:relative;
+    overflow:visible;
+    min-height:100px
+        }
+.testimonal{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none
+        }
+.testimonal:first-of-type{
+    display:block
+        }
+footer{
+    background:#4A4D50
+        }
+footer p{
+    text-align:center;
+    color:#FFF;
+    padding:0;
+    margin:0;
+    height:60px;
+    line-height:60px
+        }
+.testimonal blockquote{
+    quotes:"\201C" "\201D" "\2018" "\2019"
+        }
+.testimonal blockquote p:before{
+    color:#3085d6;
+    font-family:"Open Sans";
+    content:open-quote;
+    font-size:4em;
+    line-height:0.1em;
+    margin-right:0.25em;
+    vertical-align:-0.4em
+        }
+#wpadminbar{
+    z-index:5000 !important
+        }
+.fancybox-lock .fancybox-overlay{
+    z-index:999999
+        }
+.contact-form{
+    max-width:100%;
+    margin-bottom:10px;
+    vertical-align:middle;
+    font-size:16px;
+    overflow:hidden
+        }
+.contact-form .input.textarea{
+    height:auto
+        }
+.contact-form input,.contact-form input[type="*"],.contact-form textarea{
+    max-width:60%;
+    width:60%;
+    padding:0;
+    margin:0;
+    border:none;
+    outline:none;
+    resize:none;
+    -webkit-appearance:none;
+    font-family:"Open Sans";
+    font-weight:300;
+    font-size:16px;
+    font-size:1rem;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none
+        }
+.contact-form input{
+    padding:0 10px;
+    background:#FFF;
+    border:1px solid #d8d8d8 !important;
+    height:36px;
+    line-height:34px;
+    font-size:16px;
+    font-size:1rem;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    border-radius:4px
+        }
+.contact-form textarea{
+    padding:0 10px;
+    max-width:100%;
+    width:100%;
+    background:#FFF;
+    border:1px solid #d8d8d8 !important;
+    height:auto;
+    line-height:34px;
+    font-size:16px;
+    font-size:1rem;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    border-radius:4px
+        }
+.contact-form input[type="submit"]{
+    width:300px;
+    border:1px solid #3085d6;
+    background:#3085d6;
+    margin:2rem auto;
+    display:block;
+    color:#FFF
+        }
+.contact-form input[type="submit"]:hover{
+    cursor:pointer;
+    background:#58b2fa
+        }
+.contact-form .fscf-input-captcha{
+    width:200px
+        }
+.contact-form span{
+    font-size:.7rem;
+    color:#D04526
+        }
+.contact-form label{
+    margin:1rem 0 0 0
+        }
+.services .cat-item{
+    text-align:center
+        }
+.services .cat-item a{
+    font-size:5rem;
+    color:#FFF;
+    line-height:1.5;
+    text-shadow:1px 1px 8px #000;
+    text-transform:capitalize
+        }
+@media only screen and (max-width: 768px){
+    .services .cat-item a{
+        font-size:3rem
+            }
+}
+.services .text-center{
+    font-weight:700;
+    color:#FFF;
+    text-shadow:1px 1px 6px #000;
+    text-transform:uppercase;
+    background:rgba(0,0,0,0.5);
+    margin-bottom:100px
+        }
+.services ul ul{
+    margin:0
+        }

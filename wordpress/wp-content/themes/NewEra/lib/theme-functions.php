@@ -6,13 +6,6 @@ Backend Functions
 
 /**
  * Customize Contact Methods
- * @since 1.0.0
- *
- * @author Bill Erickson
- * @link http://sillybean.net/2010/01/creating-a-user-directory-part-1-changing-user-contact-fields/
- *
- * @param array $contactmethods
- * @return array
  */
 function idm_contactmethods( $contactmethods ) {
 	unset( $contactmethods['aim'] );
@@ -85,13 +78,6 @@ function idm_widgets_init() {
  *
  * If there is a theme in the repo with the same name,
  * this prevents WP from prompting an update.
- *
- * @author Mark Jaquith
- * @link http://markjaquith.wordpress.com/2009/12/14/excluding-your-plugin-or-theme-from-update-checks/
- *
- * @param array $r, request arguments
- * @param string $url, request url
- * @return array request arguments
  */
 function idm_dont_update_theme( $r, $url ) {
 	if ( 0 !== strpos( $url, 'http://api.wordpress.org/themes/update-check' ) )

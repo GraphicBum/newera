@@ -71,8 +71,8 @@ function idm_setup() {
 
 	// Define custom post type capabilities for use with Members
 	add_action( 'admin_init', 'idm_add_post_type_caps' );
-
-
+    // enable shortcodes in widgets
+    add_filter('widget_text', 'do_shortcode');
 	/****************************************
 	Frontend
 	*****************************************/

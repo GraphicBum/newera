@@ -28,4 +28,41 @@ jQuery( document ).ready(function( $ ) {
         openEffect      : 'none',
         closeEffect     : 'none'
     });
+    // slider
+     $(".slideshow > .slide:gt(0)").hide();
+
+    setInterval(function() { 
+      $('.slideshow > .slide:first').fadeOut(1000).next().fadeIn(1000).end().appendTo('.testimonal-wrapper');
+    },  5000);
+
+    //accordian menu
+      $('.accordian-menu > ul > li:has(ul)').addClass("has-sub");
+    $('.accordian-menu > ul > li.has-sub > a').append('<i class="icon-plus"></i>');
+
+    $('.accordian-menu > ul > li > a').click(function() {
+         $('.accordian-menu > ul > li > a > i').removeClass('icon-minus').addClass('icon-plus');
+
+        var checkElement = $(this).next();
+
+        $('.accordian-menu li').removeClass('active');
+        $(this).closest('li').addClass('active');
+        $(this).find('i').addClass('icon-minus');
+
+        if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+          $(this).closest('li').removeClass('active');
+           $(this).find('i').removeClass('icon-minus').addClass('icon-plus');
+          checkElement.slideUp('normal');
+        }
+
+        if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+          $('.accordian-menu ul ul:visible').slideUp('normal')
+          checkElement.slideDown('normal');
+        }
+
+        if (checkElement.is('ul')) {
+          return false;
+        } else {
+          return false;
+    }
+  });
 });

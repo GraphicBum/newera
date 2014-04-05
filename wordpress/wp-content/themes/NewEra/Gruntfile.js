@@ -74,6 +74,15 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        // prefix
+         autoprefixer: {
+
+            // prefix the specified file
+            single_file: {
+                src: 'assets/css/gumby.css'
+            }
+
+        },
 
        
 
@@ -81,6 +90,8 @@ module.exports = function(grunt) {
 
 
     // register task
-    grunt.registerTask('default', ['compass', 'uglify', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['compass', 'uglify', 'autoprefixer', 'watch']);
+    grunt.registerTask('sass','compass');
+     grunt.registerTask('images','imagemin');
 
 };

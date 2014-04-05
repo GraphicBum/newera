@@ -93,14 +93,12 @@ if (isset( $columns ) ){
 
       $gallery_div = "<section id='$selector' class='gallery'>";
       $output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
-       $output .= "<div class='row'>";
-      $i = 1;
       foreach ( $attachments as $id => $attachment ) {
         $link = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_link($id, $size , false, false) : wp_get_attachment_link($id, $size, true, false);
         $link = str_replace( '<a href', '<a rel="'. $selector .'" href', $link );
 
         $output .= "
-        <{$itemtag} class='gallery-item {$column} columns'>";
+        <{$itemtag} class='gallery-item'>";
         $output .= "
             $link
           ";
@@ -111,8 +109,6 @@ if (isset( $columns ) ){
               </{$captiontag}>";
         }
         $output .= "</{$itemtag}>";
-           if($i % $columns == 0){$output .= "</div><div class='row'>";}
-          $i++;
       }
 
       $output .= "
